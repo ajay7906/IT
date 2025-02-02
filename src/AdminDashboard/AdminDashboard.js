@@ -6,6 +6,12 @@ import FooterForm from './Shared/FooterForm'; // Adjust the path if needed
 import AboutUsForm from './admincomp/aboutus/AboutForm';
 import BannerForm from './admincomp/aboutus/BannerForm';
 import ApplicationServicesForm from './admincomp/services/ApplicationServicesForm';
+import ProductForm from './admincomp/product/ProductForm';
+import TabManagementForm from './admincomp/product/TabManagement';
+import CareerForm from './admincomp/careerform/CareerForm';
+import ContactForm from './admincomp/contact/ContactForm';
+import BlogForm from './admincomp/blog/BlogForm';
+import BusinessSectionForm from './admincomp/homesection/BusinessSectionForm';
 
 function AdminDashboard() {
   const [view, setView] = useState('dashboard'); // Manage the current view
@@ -53,7 +59,40 @@ function AdminDashboard() {
             )}
             {view === 'services/application' && (
               <div className="flex-1 p-8">
-                <ApplicationServicesForm/>
+                <ApplicationServicesForm />
+              </div>
+            )}
+            {view === 'products/new' && (
+              <div className="flex-1 p-8">
+                <ProductForm />
+              </div>
+            )}
+            {view === 'products/popular' && (
+              <div className="flex-1 p-8">
+                <TabManagementForm />
+              </div>
+            )}
+            {view === 'career/jobs' && (
+              <div className="flex-1 p-8">
+                <CareerForm />
+              </div>
+            )}
+
+            {view === 'contactUs/email' && (
+              <div className="flex-1 p-8">
+                <ContactForm />
+              </div>
+            )}
+
+            {view === 'blog/latest' && (
+              <div className="flex-1 p-8">
+                <BlogForm />
+              </div>
+            )}
+
+            {view === 'home/sub1' && (
+              <div className="flex-1 p-8">
+                <BusinessSectionForm />
               </div>
             )}
 
